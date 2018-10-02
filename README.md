@@ -1,6 +1,6 @@
 # batchdownloader
 
-Originally GoMusicNowDownloader on Codeplex
+Originally GoMusicNowDownloader on Codeplex, created in 2012
 
 Simple batch downloader originally designed for the website GoMusicNow.  
 
