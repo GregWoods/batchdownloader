@@ -1,0 +1,29 @@
+﻿GoMusicNow Downloader ToDo List
+===============================
+
+Next
+	* Completion message on the installer
+
+Short Term
+	* Incorporate each file's download progress into the overall progress, for finer grained progres reporting. (it would need to assume all downloads are equally sized)
+	* Need to add unit tests. This will involve mocking out the http access. This will no dount involve major code change
+	* Can files be viewed in the select folder dialog? It would be useful to see if folder is empty
+	* Could probably use the eventArgs.fileNumber instead of class variable fileNumber
+
+Refactoring
+	* Change downloader class to a singleton instance class instead of static. Allows use of constructor instead of Reset() function
+	* Possibly other events such as RequestingLogin, LoginSuccessful, LoginFailed, TrackListRecieved (check naming recommendations)
+	* Use these custom events internally in the Downloader class
+
+Longer term
+	* Globalisation?
+	* Allow adding several pairs of 'links' and 'local folders' to a queue
+	* Change the progress bar to a grid showing (perhaps) some ID3 info, the destination folder, and progress
+	* Move the settings into a separate dialog (prob only useful if I decide to add a web browser control)
+
+
+Decided Against:
+	User supplies only a root folder for all music. The app then reads ID3 tags to determine the folder structure to put the links into
+Rationale:
+	Most users will give a different folder structure to Compilations, Soundtracks, than for albums with a single artist. 
+	Also, I'm not convinced the Artist and Album Artist fields are used consistently for all downloads in the GoMusicNow website'''

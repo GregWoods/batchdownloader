@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed in 1.1.4",
+    "ClosedDate": "2012-08-03T07:53:34.057-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When an invalid or unreachable url is encountered, the program crashes. Needs fixing",
+    "LastUpdatedDate": "2017-11-30T12:52:43.697-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "gomusicnowdownloader",
+    "ReportedDate": "2012-06-07T03:20:50.427-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Crash: when invalid URL entered",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 2
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

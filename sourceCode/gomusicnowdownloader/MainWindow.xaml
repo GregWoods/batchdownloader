@@ -1,0 +1,89 @@
+﻿<Window x:Class="GoMusicNowDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GoMusicNow Downloader" Height="330" Width="600">
+	<Grid Margin="8">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>			
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Content="GoMusicNow Downloader" FontSize="24" />
+			<TextBlock Grid.Column="1" VerticalAlignment="center">                                
+			   <Hyperlink Name="weblink" RequestNavigate="OpenBrowserToGoMusicNow" NavigateUri="http://www.gomusicnow.com">
+				  GoMusicNow website
+			   </Hyperlink>
+			</TextBlock>
+			<!--<Button Grid.Column="1" VerticalAlignment="Center" Content="GoMusicNow web site" />-->
+		</Grid>
+		
+		<GroupBox Grid.Row="1" Header="Settings">
+			
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+
+				<Label Grid.Row="0" Grid.Column="0">Login E-mail</Label>
+				<TextBox Name="txtLoginEmail" Grid.Row="0" Grid.Column="1" Margin="2" />
+
+				<Label Grid.Row="1" Grid.Column="0">Password</Label>
+				<PasswordBox Name="txtLoginPassword" Grid.Row="1" Grid.Column="1" Margin="2" />
+			</Grid>
+				
+			
+
+
+		</GroupBox>
+		
+		<Label Grid.Row="2" Name="lblProgress" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+		
+		<Grid Grid.Row="3" Margin="6">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+
+			<Label Grid.Row="0" Grid.Column="0">Links Page URL</Label>
+			<TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Name="txtUrlOfLinks" GotFocus="txtUrlOfLinks_GotFocus" LostFocus="txtUrlOfLinks_LostFocus" VerticalAlignment="Center" Foreground="DimGray" TextChanged="txtUrlOfLinks_TextChanged">Paste the URL to a GoMusicNow 'Links' page here</TextBox>
+
+			<Label Grid.Row="1" Grid.Column="0">Download Folder</Label>
+			<TextBox Grid.Row="1" Grid.Column="1" Name="txtLocalMusicRootFolder" VerticalAlignment="Center" TextChanged="txtLocalMusicRootFolder_TextChanged" />
+			<Button Grid.Row="1" Grid.Column="2" Click="Browse_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="6 2">Browse...</Button>
+
+			<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Name="btnStartDownload" Click="Start_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="18 6" Margin="0,6,0,0" IsEnabled="False">Start Downloads</Button>
+			<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Name="btnCancelDownload" Click="Cancel_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="18 6" Margin="0,6,0,0" Visibility="Collapsed">Cancel Downloads</Button>
+			
+		</Grid>
+		
+		
+
+
+	</Grid>
+	
+</Window>
